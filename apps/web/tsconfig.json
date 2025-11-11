@@ -1,19 +1,23 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "@saas/tsconfig/nextjs.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next-env.d.ts",
-    "next.config.js",
-    ".next/types/**/*.ts"
-  ],
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    ".next\\dev/types/**/*.ts",
+    ".next\\dev/types/**/*.ts"
+, "tailwind.config.js"  ],
   "exclude": [
     "node_modules"
   ]
